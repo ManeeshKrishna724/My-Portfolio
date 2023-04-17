@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project.name }}</title>
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+<!-- Libraries Stylesheet -->
+<!-- Customized Bootstrap Stylesheet -->
+<link href="{% static 'styles/style.css' %}" rel="stylesheet">
+<style>
+    .cont-item {
+        margin-left: 25px;
+    }
+</style>
+<body style="margin-bottom: 50px;">
+    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 80vh;">
+        <div class="container" style="width: 100%;">    
+            <video style="margin: 0 auto; width: 100%;" controls>
+                <source src="/media/{{project.demo}}">
+            </video>
+        </div>
+    </div>
+    <div class="container">
+        <div style="margin-bottom: 20px;">
+            <p><strong>Project Title</strong></p>
+            <span class="cont-item">{{ project.name }}</span>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <p><strong>Created Date</strong></p>
+            <span class="cont-item">{{ project.created_date }}</span>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <p><strong>Project Description</strong></p>
+            <span style="display: block;word-wrap: break-word;white-space: normal;" class="cont-item">{{ project.description }}</span>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <p><strong>Project URL</strong></p>
+            <a class="primary cont-item" href="{{project.project_url }}">{{project.project_url }}</a>
+        </div>
+    </div>
+</body>
+</html>
