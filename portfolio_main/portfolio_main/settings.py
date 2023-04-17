@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-ecc-#pd@7^&31#7=v#hwt@d9pl7q1)khz)k$u!&qydyrdss!e_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-CSRF_TRUSTED_ORIGINS = ["*"]
+ALLOWED_HOSTS = ["my-portfolio-production-c839.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = ["https://my-portfolio-production-c839.up.railway.app/"]
 
 
 # Application definition
