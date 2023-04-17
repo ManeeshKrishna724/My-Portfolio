@@ -116,13 +116,18 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_ROOT = BASE_DIR / 'portfolio/staticfiles'
 STATIC_URL = 'static/'
-STATICFILES_STORAGE ="whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 STATICFILES_DIR = [
     BASE_DIR / 'portfolio/static',
 ] 
